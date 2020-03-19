@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="col-xl">
     <div class="instagram-feed">
       <h2>
         <span class="text-default">#</span>zachran<span class="text-default"

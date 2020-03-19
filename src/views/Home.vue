@@ -1,12 +1,8 @@
 <template>
   <div class="row">
-    <div class="col-xl">
-      <guide-post @on-form-selected="onFormSelected" />
-    </div>
-    <div class="col-xl">
-      <google-form v-if="showForm" :type="formType" />
-      <instagram-feed />
-    </div>
+    <guide-post @on-form-selected="onFormSelected" />
+    <google-form v-if="showForm" :type="formType" />
+    <instagram-feed />
   </div>
 </template>
 
