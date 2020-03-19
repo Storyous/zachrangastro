@@ -9,7 +9,6 @@
               class="card-link bg-gray row"
               href="http://www.kdesenajim.cz"
               target="blank"
-              rel="noopener noreferrer"
             >
               <div class="icon-section col-3"></div>
               <div class="text-section bg-white col-9">
@@ -36,7 +35,7 @@
           <div class="col-md-6">
             <a
               class="card-link bg-gray row"
-              href="https://docs.google.com/forms/d/1b45vWFV_3mPlW07nFoaAH_GQSfzma8u5-ZO_AnDc13c/edit"
+              @click="$emit('on-form-selected', 'delivery')"
             >
               <div class="icon-section col-3"><i class="fas fa-car"></i></div>
               <div class="text-section bg-white col-9">
@@ -47,9 +46,7 @@
           <div class="col-md-6">
             <a
               class="card-link bg-gray row"
-              href="https://docs.google.com/forms/d/e/1FAIpQLSd1zq8vseXmaiABAEZAE826nYJJum9-eE96F6cf0D4ldiRQLw/viewform"
-              target="blank"
-              rel="noopener noreferrer"
+              @click="$emit('on-form-selected', 'takeaway')"
             >
               <div class="icon-section col-3"></div>
               <div class="text-section bg-white col-9">
@@ -60,7 +57,7 @@
           <div class="col-md-6">
             <a
               class="card-link bg-gray row"
-              href="https://docs.google.com/forms/d/19ezYuPkXIktpI5komA80ddhWtsS9FC6UgAlA3p_3ld0/edit"
+              @click="$emit('on-form-selected', 'supplier')"
             >
               <div class="icon-section col-3"></div>
               <div class="text-section bg-white col-9">
@@ -71,7 +68,7 @@
           <div class="col-md-6">
             <a
               class="card-link bg-gray row"
-              href="https://docs.google.com/forms/d/12qXlyPsQh4GkvQ98YWWwKwscXehCWZ_CQcfDZf3a5rw/edit"
+              @click="$emit('on-form-selected', 'personnel')"
             >
               <div class="icon-section col-3"></div>
               <div class="text-section bg-white col-9">
@@ -91,7 +88,10 @@
         </h2>
         <div class="row">
           <div class="col-md-6">
-            <a class="card-link bg-gray row" href="">
+            <a
+              class="card-link bg-gray row"
+              @click="$emit('on-form-selected', 'waiter')"
+            >
               <div class="icon-section col-3"></div>
               <div class="text-section bg-white col-9">
                 <p class="text-default">
