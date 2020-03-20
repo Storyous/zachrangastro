@@ -1,5 +1,5 @@
 <template>
-  <div class="col">
+  <div class="col bg-pink" id="google-form">
     <iframe :style="styles" :src="source" frameborder="0"></iframe>
   </div>
 </template>
@@ -12,6 +12,9 @@ export default {
       required: true,
       type: String
     }
+  },
+  mounted() {
+    window.document.getElementById('google-form').scrollIntoView();
   },
   computed: {
     source: function() {
