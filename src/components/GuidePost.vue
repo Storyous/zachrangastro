@@ -2,11 +2,16 @@
   <section class="row bg-pink section">
     <div class="col-xl-4 col-md-6 card-wrapper">
       <h2 class="text-center">Jsem hladový a chci…</h2>
-      <div class="card border-0 d-flex justify-content-between">
+      <div
+        class="card border-0 border-radius-ld d-flex justify-content-between"
+      >
         <div class="icon-section text-center">
-          <i class="fas fa-cart-plus"></i>
+          <img
+            :src="require(`@/assets/img/zachrangastro_kdesenajim.png`)"
+            alt=""
+          />
         </div>
-        <div class="row">
+        <div class="row pl-3 pr-3">
           <div class="col-sm-3" />
           <a
             class="card-link bg-default col-sm-6"
@@ -22,11 +27,14 @@
 
     <div class="col-xl-4 col-md-6 card-wrapper">
       <h2 class="text-center">Jsem restauratér a potřebuji…</h2>
-      <div class="row mb-2">
-        <div class="col-sm-6 ">
+      <div class="row">
+        <div class="col-sm-6 mb-xs">
           <div class="card border-0 d-flex justify-content-between">
             <div class="icon-section text-center">
-              <i class="fas fa-car-side"></i>
+              <img
+                :src="require(`@/assets/img/zachrangastro_rozvoz.png`)"
+                alt=""
+              />
             </div>
             <a
               class="card-link bg-default"
@@ -40,7 +48,10 @@
         <div class="col-sm-6">
           <div class="card border-0 d-flex justify-content-between">
             <div class="icon-section text-center">
-              <i class="fas fa-briefcase"></i>
+              <img
+                :src="require(`@/assets/img/zachrangastro_prodejssebou.png`)"
+                alt=""
+              />
             </div>
             <a
               class="card-link bg-default"
@@ -52,11 +63,14 @@
         </div>
       </div>
 
-      <div class="row mt-2">
-        <div class="col-sm-6">
+      <div class="row gap">
+        <div class="col-sm-6 mb-xs">
           <div class="card border-0 d-flex justify-content-between">
             <div class="icon-section text-center ">
-              <i class="fas fa-people-carry"></i>
+              <img
+                :src="require(`@/assets/img/zachrangastro_dodvatele.png`)"
+                alt=""
+              />
             </div>
             <a
               class="card-link bg-default"
@@ -70,7 +84,10 @@
         <div class="col-sm-6">
           <div class="card border-0 d-flex justify-content-between">
             <div class="icon-section text-center">
-              <i class="fas fa-user-friends"></i>
+              <img
+                :src="require(`@/assets/img/zachrangastro_personal.png`)"
+                alt=""
+              />
             </div>
             <a
               class="card-link bg-default"
@@ -87,11 +104,13 @@
       <h2 class="text-center">
         Jsem číšník, kuchař a chci dělat…
       </h2>
-      <div class="card border-0 d-flex justify-content-between">
+      <div
+        class="card border-0 border-radius-ru d-flex justify-content-between"
+      >
         <div class="icon-section text-center">
-          <i class="fas fa-shipping-fast"></i>
+          <img :src="require(`@/assets/img/zachrangastro_cisnik.png`)" alt="" />
         </div>
-        <div class="row">
+        <div class="row pl-3 pr-3">
           <div class="col-sm-3" />
           <a
             class="card-link bg-default col-sm-6"
@@ -109,7 +128,17 @@
 </template>
 
 <script>
-export default {};
+export default {
+  data() {
+    return {
+      icons: [
+        {
+          img1: "zachrangastro_kdesenajim.png"
+        }
+      ]
+    };
+  }
+};
 </script>
 
 <style scoped lang="scss">
@@ -122,11 +151,16 @@ export default {};
 
   .icon-section {
     height: 100%;
+    padding: 0 1.5rem;
+
+    img {
+      width: 100%;
+    }
   }
 
   .card-link {
     border-radius: 10px;
-    margin-bottom: 1rem;
+    margin: 0 1rem 1rem 1rem;
     cursor: pointer;
 
     p {
@@ -136,6 +170,31 @@ export default {};
   }
 }
 
+.gap {
+  margin-top: 13px;
+}
+
+.border-radius-ld {
+  border-radius: 0 0 0 10%;
+
+  @media (max-width: 576px) {
+    border-radius: 0 0 0 0;
+  }
+}
+
+.border-radius-ru {
+  border-radius: 0 10% 0 0;
+
+  @media (max-width: 576px) {
+    border-radius: 0 0 0 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .mb-xs {
+    margin-bottom: 13px;
+  }
+}
 .fas {
   color: #f05a5a;
   display: flex;
