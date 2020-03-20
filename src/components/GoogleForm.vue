@@ -14,7 +14,7 @@ export default {
     }
   },
   mounted() {
-    window.document.getElementById('google-form').scrollIntoView();
+    window.document.getElementById("google-form").scrollIntoView();
   },
   computed: {
     source: function() {

@@ -10,11 +10,15 @@
         <h3>Naši partneři</h3>
       </div>
     </div>
-    <div class="row partners">
-      <div class="col" v-for="partner in partners" :key="partner.alt">
-        <a :href="partner.link" target="_blank">
+    <div class="row partners d-flex justify-content-center">
+      <div
+        class="col-5 col-sm-3"
+        v-for="partner in partners"
+        :key="partner.alt"
+      >
+        <a :href="partner.link" target="_blank" rel="noopener noreferrer">
           <img
-            :src="require(`@/assets/img/${partner.image}`)"
+            :src="require(`@/assets/img/partners/${partner.image}`)"
             :alt="partner.alt"
           />
         </a>
@@ -55,13 +59,21 @@ export default {
       showForm: false,
       formType: null,
       partners: [
-        { link: "https://www.makro.cz", image: "partner_1.jpg", alt: "Makro" },
-        { link: "https://www.kofola.cz", image: "partner_2.jpg", alt: "Kofola" },
-        { link: "https://www.prazdroj.czcom", image: "partner_3.jpg", alt: "Plzensky Prazdroj" },
-        { link: "http://amsp.cz", image: "partner_4.jpg", alt: "AMSP" },
-        { link: "https://www.kosik.cz", image: "partner_5.jpg", alt: "Kosik" },
-        { link: "https://mallpay.cz", image: "partner_6.jpg", alt: "Mall Pay" },
-        { link: "https://www.csob.cz", image: "partner_7.jpg", alt: "CSOB" }
+        { link: "https://www.makro.cz", image: "partner_1.png", alt: "Makro" },
+        {
+          link: "https://www.kofola.cz",
+          image: "partner_2.png",
+          alt: "Kofola"
+        },
+        {
+          link: "https://www.prazdroj.czcom",
+          image: "partner_3.png",
+          alt: "Plzensky Prazdroj"
+        },
+        { link: "http://amsp.cz", image: "partner_4.png", alt: "AMSP" },
+        { link: "https://www.kosik.cz", image: "partner_5.png", alt: "Kosik" },
+        { link: "https://mallpay.cz", image: "partner_6.png", alt: "Mall Pay" },
+        { link: "https://www.csob.cz", image: "partner_7.png", alt: "CSOB" }
       ]
     };
   },
@@ -86,8 +98,22 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+h3 {
+  margin: 2rem 0;
+}
 .partners {
   margin-bottom: 30px;
+
+  @media (min-width: 768px) and (max-width: 1199px) {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  }
+
+  @media (min-width: 1200px) {
+    padding-left: 15rem;
+    padding-right: 15rem;
+  }
+
   img {
     max-width: 100%;
   }

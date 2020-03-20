@@ -9,7 +9,8 @@
               Tržby v gastru se propadly o 84%.
               <br />
               <span class="font-weight-semibold">
-                Necháme celou naši gastro scénu padnout, nebo to spolu zvládneme?
+                Necháme celou naši gastro scénu padnout, nebo to spolu
+                zvládneme?
               </span>
             </p>
           </div>
@@ -55,7 +56,8 @@ p {
 }
 
 .section {
-  padding-bottom: 6rem;
+  padding-top: 2rem;
+  padding-bottom: 3rem;
 }
 
 .font-weight-semibold {
@@ -80,7 +82,7 @@ p {
   }
 }
 .main-banner {
-  background-image: url('assets/img/background.png');
+  background-image: url("assets/img/background.png");
   background-position: top right;
   background-size: 90%;
   background-repeat: no-repeat;

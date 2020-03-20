@@ -1,5 +1,5 @@
 <template>
-  <div class="col-12">
+  <section class="col-12 bg-pink section">
     <div class="instagram-feed">
       <h3 class="instagram-hashtag">
         <a href="https://www.instagram.com/explore/tags/zachrangastro/">
@@ -8,7 +8,7 @@
       </h3>
       <div class="row">
         <div
-          v-for="post of posts.slice().reverse()"
+          v-for="post of posts.slice(0, 4).reverse()"
           :key="post.id"
           class="d-block col-sm-4 col-md-3 col-lg-3 image-wrapper pt-3"
         >
@@ -18,7 +18,7 @@
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -44,11 +44,6 @@ export default {
         {
           id: 4,
           image: "gastro_4.jpg",
-          link: "https://www.instagram.com/p/B985P9xD_2A/"
-        },
-        {
-          id: 5,
-          image: "gastro_5.jpg",
           link: "https://www.instagram.com/p/B986Y0GJVm2/"
         }
       ]
@@ -62,8 +57,9 @@ a:hover {
   text-decoration: none;
 }
 .instagram-feed {
-  margin: 1rem;
-  padding: 1.5rem;
+  @media (min-width: 768px) {
+    margin: 0 5rem;
+  }
 
   .instagram-hashtag {
     text-align: center;
@@ -76,6 +72,9 @@ a:hover {
   }
 
   .image-wrapper {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+
     &:hover {
       img {
         filter: brightness(0.8);
@@ -88,6 +87,7 @@ a:hover {
       position: relative;
       height: 100%;
       padding-bottom: 100%;
+      border: 7px solid #fff;
     }
 
     img {
