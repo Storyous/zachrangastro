@@ -1,18 +1,20 @@
 <template>
   <div class="col-xl">
     <div class="instagram-feed">
-      <h2>
-        <span class="text-default">#</span>zachran<span class="text-default"
-          >gastro</span
-        >
-      </h2>
+      <a href="https://www.instagram.com/explore/tags/zachrangastro/?hl=cs">
+        <h2 class="text-dark">
+          <span class="text-default">#</span>zachran<span class="text-default"
+            >gastro</span
+          >
+        </h2>
+      </a>
       <div class="row">
         <div
           v-for="post of posts.slice().reverse()"
           :key="post.id"
           class="d-block col-sm-6 col-md-4 col-lg-4 image-wrapper pt-4"
         >
-          <a :href="`${post.link}`">
+          <a :href="`${post.link}`" target="_blank" rel="noopener noreferrer">
             <img :src="require(`@/assets/img/${post.image}`)" />
           </a>
         </div>
@@ -64,24 +66,39 @@ export default {
   padding: 1.5rem;
   border-radius: 10px;
 
+  a {
+    &:hover {
+      text-decoration: none;
+    }
+  }
+
   h2 {
     margin-bottom: 0;
   }
 
   .image-wrapper {
-    // overflow: hidden;
-
     &:hover {
       img {
-        border: 1px solid transparent;
+        filter: brightness(0.9);
       }
     }
+
+    a {
+      overflow: hidden;
+      display: block;
+      position: relative;
+      height: 100%;
+      padding-bottom: 100%;
+    }
+
     img {
-      // object-fit: cover;
-      // height: 100%;
-      // left: 0;
-      // position: absolute;
       width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      object-fit: cover;
+      position: absolute;
+      display: block;
     }
   }
 }
