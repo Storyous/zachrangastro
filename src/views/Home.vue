@@ -1,5 +1,5 @@
 <template>
-  <div class="row">
+  <div>
     <guide-post @on-form-selected="onFormSelected" />
     <google-form v-if="showForm" :type="formType" />
     <instagram-feed />

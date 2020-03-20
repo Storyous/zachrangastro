@@ -1,121 +1,111 @@
 <template>
-  <div class="col-xl-6">
-    <div class="card border-0 row">
-      <div class="col p-4">
-        <h2>Jsem <span class="text-default">hladový</span> a chci…</h2>
+  <section class="row bg-pink section">
+    <div class="col-xl-4 col-md-6 card-wrapper">
+      <h2 class="text-center">Jsem hladový a chci…</h2>
+      <div class="card border-0 d-flex justify-content-between">
+        <div class="icon-section text-center">
+          <i class="fas fa-cart-plus"></i>
+        </div>
         <div class="row">
-          <div class="col-md-6">
-            <a
-              class="card-link bg-gray row"
-              href="http://www.kdesenajim.cz"
-              target="blank"
-            >
-              <div class="icon-section text-center col-3">
-                <i class="fas fa-cart-plus"></i>
-              </div>
-              <div class="text-section bg-white col-9">
-                <p class="text-default text-center">Objednat jídlo s sebou</p>
-              </div>
-            </a>
-          </div>
-          <!-- <div class="col-md-6">
-            <a class="card-link bg-gray row" href="">
-              <div class="icon-section col-3"><i class="fas fa-car"></i></div>
-              <div class="text-section bg-white col-9">
-                <p class="text-default">Dovézt jídlo</p>
-              </div>
-            </a>
-          </div> -->
+          <div class="col-sm-3" />
+          <a
+            class="card-link bg-default col-sm-6"
+            href="http://www.kdesenajim.cz"
+            target="blank"
+          >
+            <p class="text-white text-center">Objednat jídlo s sebou</p>
+          </a>
+          <div class="col-sm-30" />
         </div>
       </div>
     </div>
 
-    <div class="card border-0 row">
-      <div class="col p-4">
-        <h2>Jsem <span class="text-default">restauratér</span> a potřebuji…</h2>
-        <div class="row">
-          <div class="col-md-6">
+    <div class="col-xl-4 col-md-6 card-wrapper">
+      <h2 class="text-center">Jsem restauratér a potřebuji…</h2>
+      <div class="row mb-2">
+        <div class="col-sm-6 ">
+          <div class="card border-0 d-flex justify-content-between">
+            <div class="icon-section text-center">
+              <i class="fas fa-car-side"></i>
+            </div>
             <a
-              class="card-link bg-gray row"
+              class="card-link bg-default"
               @click="$emit('on-form-selected', 'delivery')"
             >
-              <div class="icon-section text-center col-3">
-                <i class="fas fa-car-side"></i>
-              </div>
-              <div class="text-section bg-white col-9">
-                <p class="text-default text-center">Rozvážet jídlo</p>
-              </div>
+              <p class="text-white text-center">Rozvážet jídlo</p>
             </a>
           </div>
-          <div class="col-md-6">
+        </div>
+
+        <div class="col-sm-6">
+          <div class="card border-0 d-flex justify-content-between">
+            <div class="icon-section text-center">
+              <i class="fas fa-briefcase"></i>
+            </div>
             <a
-              class="card-link bg-gray row"
+              class="card-link bg-default"
               @click="$emit('on-form-selected', 'takeaway')"
             >
-              <div class="icon-section text-center col-3">
-                <i class="fas fa-briefcase"></i>
-              </div>
-              <div class="text-section bg-white col-9">
-                <p class="text-default text-center">Prodávat jídlo s sebou</p>
-              </div>
+              <p class="text-white text-center">Prodávat jídlo s sebou</p>
             </a>
           </div>
-          <div class="col-md-6">
+        </div>
+      </div>
+
+      <div class="row mt-2">
+        <div class="col-sm-6">
+          <div class="card border-0 d-flex justify-content-between">
+            <div class="icon-section text-center ">
+              <i class="fas fa-people-carry"></i>
+            </div>
             <a
-              class="card-link bg-gray row"
+              class="card-link bg-default"
               @click="$emit('on-form-selected', 'supplier')"
             >
-              <div class="icon-section text-center col-3">
-                <i class="fas fa-people-carry"></i>
-              </div>
-              <div class="text-section bg-white col-9">
-                <p class="text-default text-center">Dodavatele surovin</p>
-              </div>
+              <p class="text-white text-center">Dodavatele surovin</p>
             </a>
           </div>
-          <div class="col-md-6">
+        </div>
+
+        <div class="col-sm-6">
+          <div class="card border-0 d-flex justify-content-between">
+            <div class="icon-section text-center">
+              <i class="fas fa-user-friends"></i>
+            </div>
             <a
-              class="card-link bg-gray row"
+              class="card-link bg-default"
               @click="$emit('on-form-selected', 'personnel')"
             >
-              <div class="icon-section text-center col-3">
-                <i class="fas fa-user-friends"></i>
-              </div>
-              <div class="text-section bg-white col-9">
-                <p class="text-default text-center">Personál</p>
-              </div>
+              <p class="text-white text-center">Personál</p>
             </a>
           </div>
         </div>
       </div>
     </div>
 
-    <div class="card border-0 row">
-      <div class="col p-4">
-        <h2>
-          Jsem <span class="text-default">číšník</span>,
-          <span class="text-default">kuchař</span> a chci dělat…
-        </h2>
+    <div class="col-xl-4 col-md-6 card-wrapper">
+      <h2 class="text-center">
+        Jsem číšník, kuchař a chci dělat…
+      </h2>
+      <div class="card border-0 d-flex justify-content-between">
+        <div class="icon-section text-center">
+          <i class="fas fa-shipping-fast"></i>
+        </div>
         <div class="row">
-          <div class="col-md-6">
-            <a
-              class="card-link bg-gray row"
-              @click="$emit('on-form-selected', 'waiter')"
-            >
-              <div class="icon-section text-center col-3">
-                <i class="fas fa-shipping-fast"></i>
-              </div>
-              <div class="text-section bg-white col-9">
-                <p class="text-default text-center">
-                  Rozvoz jídla
-                </p>
-              </div>
-            </a>
-          </div>
+          <div class="col-sm-3" />
+          <a
+            class="card-link bg-default col-sm-6"
+            @click="$emit('on-form-selected', 'waiter')"
+          >
+            <p class="text-white text-center">
+              Rozvoz jídla
+            </p>
+          </a>
+          <div class="col-sm-3" />
         </div>
       </div>
     </div>
-  </div>
+  </section>
 </template>
 
 <script>
@@ -123,53 +113,31 @@ export default {};
 </script>
 
 <style scoped lang="scss">
+.card-wrapper {
+  margin-bottom: 2rem;
+}
+
 .card {
-  background-color: #eeeeee;
-  border-radius: 10px;
-  margin: 1rem;
+  border-radius: 0;
+
+  .icon-section {
+    height: 100%;
+  }
 
   .card-link {
     border-radius: 10px;
-    border: 1px solid #5a5a5a;
-    margin: 1rem 0 1rem 0;
+    margin-bottom: 1rem;
     cursor: pointer;
 
-    .icon-section {
-      border-radius: 10px 0 0 10px;
-    }
-
-    .text-section {
-      border-radius: 0 10px 10px 0;
-
-      p {
-        margin: 1rem;
-        font-weight: 400;
-      }
-    }
-
-    &:hover {
-      background-color: darken(#5a5a5a, 15%);
-
-      .text-section,
-      .text-section:hover {
-        background-color: #f8f8f8 !important;
-      }
-
-      p,
-      p:hover {
-        color: darken(#d45354, 20%);
-      }
-
-      .fas,
-      .fas:hover {
-        color: #f8f8f8 !important;
-      }
+    p {
+      margin: 1rem;
+      font-weight: 400;
     }
   }
 }
 
 .fas {
-  color: white;
+  color: #f05a5a;
   display: flex;
   height: 100%;
 

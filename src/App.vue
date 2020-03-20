@@ -1,10 +1,11 @@
 <template>
   <div id="app" class="container-fluid">
-    <div class="row">
-      <div class="bg-default col text-center">
+    <div class="row bg-pink">
+      <div class="col">
         <h1 class="text-uppercase bg-white text-default">#zachrangastro</h1>
         <p class="text-body">
           Tržby v gastru se propadly o 84%.
+          <br />
           <span class="font-weight-semibold"
             >Necháme celou naši gastro scénu padnout, nebo to spolu
             zvládneme?</span
@@ -35,7 +36,7 @@ export default {
 }
 
 h1 {
-  margin: 1rem auto !important;
+  margin: 1rem 0 1rem 1rem !important;
   padding: 0 1rem !important;
   font-size: 3rem !important;
   font-weight: 700 !important;
@@ -43,8 +44,11 @@ h1 {
 }
 
 p {
-  font-size: 1.25rem;
-  margin: 1rem !important;
+  margin: 0.75rem 0.25rem !important;
+}
+
+.section {
+  padding-bottom: 6rem;
 }
 
 .font-weight-semibold {

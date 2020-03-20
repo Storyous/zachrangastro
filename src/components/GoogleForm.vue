@@ -1,5 +1,5 @@
 <template>
-  <div class="col-xl-6">
+  <div class="col">
     <iframe :style="styles" :src="source" frameborder="0"></iframe>
   </div>
 </template>
