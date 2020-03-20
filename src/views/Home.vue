@@ -55,21 +55,13 @@ export default {
       showForm: false,
       formType: null,
       partners: [
-        { link: "http://storyous.com", image: "partner_1.jpg", alt: "Makro" },
-        { link: "http://storyous.com", image: "partner_2.jpg", alt: "Kofola" },
-        {
-          link: "http://storyous.com",
-          image: "partner_3.jpg",
-          alt: "Plzensky Prazdroj"
-        },
-        { link: "http://storyous.com", image: "partner_4.jpg", alt: "AMSP" },
-        { link: "http://storyous.com", image: "partner_5.jpg", alt: "Kosik" },
-        {
-          link: "http://storyous.com",
-          image: "partner_6.jpg",
-          alt: "Mall Pay"
-        },
-        { link: "http://storyous.com", image: "partner_7.jpg", alt: "CSOB" }
+        { link: "https://www.makro.cz", image: "partner_1.jpg", alt: "Makro" },
+        { link: "https://www.kofola.cz", image: "partner_2.jpg", alt: "Kofola" },
+        { link: "https://www.prazdroj.czcom", image: "partner_3.jpg", alt: "Plzensky Prazdroj" },
+        { link: "http://amsp.cz", image: "partner_4.jpg", alt: "AMSP" },
+        { link: "https://www.kosik.cz", image: "partner_5.jpg", alt: "Kosik" },
+        { link: "https://mallpay.cz", image: "partner_6.jpg", alt: "Mall Pay" },
+        { link: "https://www.csob.cz", image: "partner_7.jpg", alt: "CSOB" }
       ]
     };
   },
