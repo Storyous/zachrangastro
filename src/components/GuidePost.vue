@@ -132,6 +132,7 @@ export default {};
     border-radius: 10px;
     border: 1px solid #5a5a5a;
     margin: 1rem 0 1rem 0;
+    cursor: pointer;
 
     .icon-section {
       border-radius: 10px 0 0 10px;
@@ -147,6 +148,8 @@ export default {};
     }
 
     &:hover {
+      background-color: darken(#5a5a5a, 15%);
+
       .text-section,
       .text-section:hover {
         background-color: #f8f8f8 !important;
@@ -155,6 +158,11 @@ export default {};
       p,
       p:hover {
         color: darken(#d45354, 20%);
+      }
+
+      .fas,
+      .fas:hover {
+        color: #f8f8f8 !important;
       }
     }
   }
