@@ -1,7 +1,7 @@
 <template>
   <div>
+    <guide-post @on-form-selected="onFormSelected" />
     <div class="row">
-      <guide-post @on-form-selected="onFormSelected" />
       <google-form v-if="showForm" :type="formType" />
       <instagram-feed />
     </div>
