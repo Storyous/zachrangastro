@@ -1,18 +1,16 @@
 <template>
-  <div class="col-xl">
+  <div class="col-12">
     <div class="instagram-feed">
-      <a href="https://www.instagram.com/explore/tags/zachrangastro/?hl=cs">
-        <h2 class="text-dark">
-          <span class="text-default">#</span>zachran<span class="text-default"
-            >gastro</span
-          >
-        </h2>
-      </a>
+      <h3 class="instagram-hashtag">
+        <a href="https://www.instagram.com/explore/tags/zachrangastro/">
+          #zachrangastro
+        </a>
+      </h3>
       <div class="row">
         <div
           v-for="post of posts.slice().reverse()"
           :key="post.id"
-          class="d-block col-sm-6 col-md-4 col-lg-4 image-wrapper pt-4"
+          class="d-block col-sm-4 col-md-3 col-lg-3 image-wrapper pt-3"
         >
           <a :href="`${post.link}`" target="_blank" rel="noopener noreferrer">
             <img :src="require(`@/assets/img/${post.image}`)" />
@@ -60,26 +58,27 @@ export default {
 </script>
 
 <style scoped lang="scss">
+a:hover {
+  text-decoration: none;
+}
 .instagram-feed {
-  margin: 1rem 0;
-  border: 1px solid #f05a5a;
+  margin: 1rem;
   padding: 1.5rem;
-  border-radius: 10px;
 
-  a {
-    &:hover {
-      text-decoration: none;
+  .instagram-hashtag {
+    text-align: center;
+    a {
+      color: #343a40;
     }
-  }
-
-  h2 {
-    margin-bottom: 0;
+    > a:hover {
+      color: #d45354;
+    }
   }
 
   .image-wrapper {
     &:hover {
       img {
-        filter: brightness(0.9);
+        filter: brightness(0.8);
       }
     }
 
@@ -101,9 +100,5 @@ export default {
       display: block;
     }
   }
-}
-
-h2 {
-  margin-bottom: 1rem;
 }
 </style>
