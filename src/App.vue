@@ -1,13 +1,9 @@
 <template>
   <div id="app" class="container-fluid">
     <div class="row">
-      <div class="bg-default col text-center text-white">
-        <h1>#<span class="text-dark">zachran</span>gastro</h1>
-      </div>
-    </div>
-    <div class="row">
-      <div class="bg-gray col text-center text-white">
-        <p>
+      <div class="bg-default col text-center">
+        <h1 class="text-uppercase bg-white text-default">#zachrangastro</h1>
+        <p class="text-body">
           Tržby v gastru se propadly o 84%.
           <span class="font-weight-semibold"
             >Necháme celou naši gastro scénu padnout, nebo to spolu
@@ -15,6 +11,7 @@
           >
         </p>
       </div>
+      <div class="col"></div>
     </div>
     <home />
   </div>
@@ -38,8 +35,11 @@ export default {
 }
 
 h1 {
+  margin: 1rem auto !important;
+  padding: 0 1rem !important;
   font-size: 3rem !important;
-  margin: 1rem !important;
+  font-weight: 700 !important;
+  width: fit-content;
 }
 
 p {
@@ -51,15 +51,19 @@ p {
   font-weight: 600;
 }
 
+.text-body {
+  color: #252525;
+}
+
+.bg-pink {
+  background-color: #ffeae5;
+}
+
 .bg-default {
-  background-color: #d45354;
+  background-color: #f05a5a;
 }
 
 .text-default {
-  color: #d45354;
-}
-
-.bg-gray {
-  background-color: #5a5a5a;
+  color: #f05a5a;
 }
 </style>

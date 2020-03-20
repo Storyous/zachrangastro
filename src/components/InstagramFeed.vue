@@ -61,8 +61,8 @@ export default {
 
 <style scoped lang="scss">
 .instagram-feed {
-  margin: 1rem;
-  border: 1px solid #d45354;
+  margin: 1rem 0;
+  border: 1px solid #f05a5a;
   padding: 1.5rem;
   border-radius: 10px;
 

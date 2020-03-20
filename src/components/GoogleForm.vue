@@ -42,7 +42,8 @@ export default {
 
 <style scoped>
 iframe {
-  padding-top: 15px;
+  margin: 15px 0;
+  border-radius: 10px;
   width: 100%;
 }
 </style>
