@@ -1,18 +1,23 @@
 <template>
   <div id="app" class="container-fluid">
-    <div class="row bg-pink">
-      <div class="col">
-        <h1 class="text-uppercase bg-white text-default">#zachrangastro</h1>
-        <p class="text-body">
-          Tržby v gastru se propadly o 84%.
-          <br />
-          <span class="font-weight-semibold"
-            >Necháme celou naši gastro scénu padnout, nebo to spolu
-            zvládneme?</span
-          >
-        </p>
+    <div>
+      <div class="row bg-pink main-banner">
+        <div class="col">
+          <div class="banner-positioner">
+            <h1 class="text-uppercase bg-white text-default">#zachrangastro</h1>
+            <p class="text-body">
+              Tržby v gastru se propadly o 84%.
+              <br />
+              <span class="font-weight-semibold">
+                Necháme celou naši gastro scénu padnout, nebo to spolu zvládneme?
+              </span>
+            </p>
+          </div>
+        </div>
+        <div class="col">
+          <social-icons class="social-icons-banner" />
+        </div>
       </div>
-      <div class="col"></div>
     </div>
     <home />
   </div>
@@ -20,11 +25,13 @@
 
 <script>
 import Home from "./views/Home.vue";
+import SocialIcons from "./components/SocialIcons.vue";
 
 export default {
   name: "App",
   components: {
-    Home
+    Home,
+    SocialIcons
   }
 };
 </script>
@@ -58,7 +65,26 @@ p {
 .text-body {
   color: #252525;
 }
-
+.social-icons-banner {
+  margin-top: 20%;
+  float: right;
+  a {
+    display: block;
+    padding: 10px;
+  }
+}
+.banner-positioner {
+  padding: 7% 0 42% 35%;
+  > p {
+    padding-left: 20px;
+  }
+}
+.main-banner {
+  background-image: url('assets/img/background.png');
+  background-position: top right;
+  background-size: 90%;
+  background-repeat: no-repeat;
+}
 .bg-pink {
   background-color: #ffeae5;
 }
