@@ -14,7 +14,7 @@
                 <i class="fas fa-cart-plus"></i>
               </div>
               <div class="text-section bg-white col-9">
-                <p class="text-default">Objednat jídlo s sebou</p>
+                <p class="text-default text-center">Objednat jídlo s sebou</p>
               </div>
             </a>
           </div>
@@ -43,7 +43,7 @@
                 <i class="fas fa-car-side"></i>
               </div>
               <div class="text-section bg-white col-9">
-                <p class="text-default">Rozvážet jídlo</p>
+                <p class="text-default text-center">Rozvážet jídlo</p>
               </div>
             </a>
           </div>
@@ -56,7 +56,7 @@
                 <i class="fas fa-briefcase"></i>
               </div>
               <div class="text-section bg-white col-9">
-                <p class="text-default">Prodávat jídlo s sebou</p>
+                <p class="text-default text-center">Prodávat jídlo s sebou</p>
               </div>
             </a>
           </div>
@@ -69,7 +69,7 @@
                 <i class="fas fa-people-carry"></i>
               </div>
               <div class="text-section bg-white col-9">
-                <p class="text-default">Dodavatele surovin</p>
+                <p class="text-default text-center">Dodavatele surovin</p>
               </div>
             </a>
           </div>
@@ -82,7 +82,7 @@
                 <i class="fas fa-user-friends"></i>
               </div>
               <div class="text-section bg-white col-9">
-                <p class="text-default">Personál</p>
+                <p class="text-default text-center">Personál</p>
               </div>
             </a>
           </div>
@@ -106,7 +106,7 @@
                 <i class="fas fa-shipping-fast"></i>
               </div>
               <div class="text-section bg-white col-9">
-                <p class="text-default">
+                <p class="text-default text-center">
                   Rozvoz jídla
                 </p>
               </div>
