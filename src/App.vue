@@ -2,7 +2,7 @@
   <div id="app" class="container-fluid">
     <div>
       <div class="row bg-pink main-banner">
-        <div class="col-md-8">
+        <div class="col-md-8 col-lg-7">
           <div class="row">
             <picture class="w-100 d-xs-block d-md-none">
               <source
@@ -28,7 +28,15 @@
             </picture>
           </div>
           <div class="banner-positioner">
-            <h1 class="text-uppercase bg-white text-default">#zachrangastro</h1>
+            <h1 class="text-uppercase bg-white text-default">
+              <a
+                href="https://www.instagram.com/explore/tags/zachrangastro/"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="page-title"
+                >#zachrangastro</a
+              >
+            </h1>
             <p class="text-body">
               Tržby v gastru se propadly o 84%.
               <br />
@@ -39,7 +47,7 @@
             </p>
           </div>
         </div>
-        <div class="col-md-4 d-none d-xl-block">
+        <div class="col-md-4 col-lg-5 d-none d-xl-block">
           <social-icons class="some-icons-banner" />
         </div>
       </div>
@@ -90,10 +98,27 @@ h1 {
   @media (max-width: 347px) {
     font-size: 1.75rem !important;
   }
+
+  a {
+    color: #f05a5a;
+  }
+  > a:hover {
+    color: #f05a5a;
+    text-decoration: none;
+  }
 }
 
 p {
   margin: 0.75rem 0.25rem !important;
+  font-size: 1.2rem;
+
+  @media (min-width: 1200px) {
+    font-size: 1.5rem;
+  }
+
+  @media (max-width: 399px) {
+    font-size: 1rem;
+  }
 }
 
 .section {
@@ -168,6 +193,14 @@ p {
   background-size: 100%;
   background-repeat: no-repeat;
 
+  @media (min-width: 1701px) {
+    background-position: 4.5rem -10rem;
+  }
+
+  @media (min-width: 1600px) and (max-width: 1700px) {
+    background-position: 4.5rem -6rem;
+  }
+
   @media (min-width: 768px) and (max-width: 991px) {
     background-position: 4.7rem top;
     background-size: 110%;
@@ -188,5 +221,19 @@ p {
 
 .text-default {
   color: #f05a5a;
+}
+
+.btn-default {
+  background-color: #f05a5a !important;
+  color: #fff !important;
+  margin: 1rem auto;
+  padding: 1rem 0.5rem;
+
+  &:hover {
+    background-color: darken(#f05a5a, 5%) !important;
+  }
+
+  @media (max-width: 575px) {
+  }
 }
 </style>

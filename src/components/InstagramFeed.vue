@@ -1,8 +1,12 @@
 <template>
-  <section class="col-12 bg-pink section">
+  <section class="col-12 bg-pink space-for-video">
     <div class="instagram-feed">
       <h3 class="instagram-hashtag">
-        <a href="https://www.instagram.com/explore/tags/zachrangastro/">
+        <a
+          href="https://www.instagram.com/explore/tags/zachrangastro/"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
           #zachrangastro
         </a>
       </h3>
@@ -56,6 +60,19 @@ export default {
 a:hover {
   text-decoration: none;
 }
+
+.space-for-video {
+  padding-bottom: 30rem;
+
+  @media (min-width: 550px) and (max-width: 750px) {
+    padding-bottom: 22rem;
+  }
+
+  @media (max-width: 549px) {
+    padding-bottom: 14rem;
+  }
+}
+
 .instagram-feed {
   @media (min-width: 768px) {
     margin: 0 5rem;
@@ -67,7 +84,7 @@ a:hover {
       color: #343a40;
     }
     > a:hover {
-      color: #d45354;
+      color: #f05a5a;
     }
   }
 

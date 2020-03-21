@@ -5,6 +5,25 @@
       <google-form v-if="showForm" :type="formType" />
       <instagram-feed />
     </div>
+    <div class="row position-relative videocard-wrapper">
+      <div class="col-auto video-position position-absolute">
+        <div class=" video-frame-wrapper bg-white d-flex flex-column">
+          <iframe
+            src="https://www.youtube-nocookie.com/embed/CrZnw1rirtY?controls=0"
+            frameborder="0"
+            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen
+            class="video-frame"
+          ></iframe>
+          <a
+            href="https://www.youtube.com/results?search_query=%23ZachranGastro"
+            class="btn btn-default col-sm-6 col-md-3 col-lg-4"
+          >
+            Více videí
+          </a>
+        </div>
+      </div>
+    </div>
     <div class="row">
       <div class="col text-center">
         <h3>Naši partneři</h3>
@@ -69,11 +88,6 @@ export default {
           image: "partner_2.png",
           alt: "Kofola"
         },
-        {
-          link: "https://www.prazdroj.czcom",
-          image: "partner_3.png",
-          alt: "Plzensky Prazdroj"
-        },
         { link: "http://amsp.cz", image: "partner_4.png", alt: "AMSP" },
         { link: "https://www.kosik.cz", image: "partner_5.png", alt: "Kosik" },
         { link: "https://mallpay.cz", image: "partner_6.png", alt: "Mall Pay" },
@@ -105,6 +119,81 @@ export default {
 h3 {
   margin: 2rem 0;
 }
+
+.videocard-wrapper {
+  height: 230px;
+
+  @media (min-width: 751px) and (max-width: 1199px) {
+    height: 184px;
+  }
+
+  @media (min-width: 650px) and (max-width: 750px) {
+    height: 200px;
+  }
+
+  @media (min-width: 550px) and (max-width: 649px) {
+    height: 135px;
+  }
+
+  @media (min-width: 450px) and (max-width: 549px) {
+    height: 180px;
+  }
+
+  @media (max-width: 449px) {
+    height: 105px;
+  }
+}
+
+.video-position {
+  top: -350px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @media (min-width: 550px) and (max-width: 750px) {
+    top: -260px;
+  }
+
+  @media (max-width: 549px) {
+    top: -160px;
+  }
+}
+
+.video-frame-wrapper {
+  padding: 1rem;
+  filter: drop-shadow(0px 0px 7px #00000020);
+}
+
+.video-frame {
+  width: 660.8px;
+  height: 371.7px;
+  margin-bottom: 1rem;
+
+  @media (min-width: 650px) and (max-width: 750px) {
+    width: 560px;
+    height: 315px;
+  }
+
+  @media (min-width: 550px) and (max-width: 649px) {
+    width: 459px;
+    height: 258px;
+  }
+
+  @media (min-width: 450px) and (max-width: 549px) {
+    width: 358px;
+    height: 201px;
+  }
+
+  @media (min-width: 350px) and (max-width: 449px) {
+    width: 257px;
+    height: 144px;
+  }
+
+  @media (min-width: 320px) and (max-width: 349px) {
+    width: 229px;
+    height: 129px;
+  }
+}
+
 .partners {
   margin-bottom: 30px;
 
@@ -122,6 +211,7 @@ h3 {
     max-width: 100%;
   }
 }
+
 .storyous-logo {
   width: 150px;
   margin-left: 3.3rem;

@@ -12,16 +12,13 @@
             alt=""
           />
         </div>
-        <div class="row pl-3 pr-3">
-          <div class="col-sm-3" />
+        <div class="row ml-3 mr-3 d-flex flex-column">
           <a
-            class="card-link bg-default col-sm-6"
+            class="col-sm-6 btn btn-default btn-block"
             href="http://www.kdesenajim.cz"
             target="blank"
-          >
-            <p class="text-white text-center">Objednat jídlo s sebou</p>
+            >Objednat jídlo s sebou
           </a>
-          <div class="col-sm-30" />
         </div>
       </div>
     </div>
@@ -37,12 +34,13 @@
                 alt=""
               />
             </div>
-            <a
-              class="card-link bg-default"
-              @click="$emit('on-form-selected', 'delivery')"
-            >
-              <p class="text-white text-center">Rozvážet jídlo</p>
-            </a>
+            <div class="ml-3 mr-3">
+              <a
+                class="btn btn-default btn-block"
+                @click="$emit('on-form-selected', 'delivery')"
+                >Rozvážet jídlo
+              </a>
+            </div>
           </div>
         </div>
 
@@ -56,12 +54,13 @@
                 alt=""
               />
             </div>
-            <a
-              class="card-link bg-default"
-              @click="$emit('on-form-selected', 'takeaway')"
-            >
-              <p class="text-white text-center">Prodávat jídlo s sebou</p>
-            </a>
+            <div class="ml-3 mr-3">
+              <a
+                class="btn btn-default btn-block"
+                @click="$emit('on-form-selected', 'takeaway')"
+                >Prodávat jídlo s sebou
+              </a>
+            </div>
           </div>
         </div>
 
@@ -73,12 +72,14 @@
                 alt=""
               />
             </div>
-            <a
-              class="card-link bg-default"
-              @click="$emit('on-form-selected', 'supplier')"
-            >
-              <p class="text-white text-center">Dodavatele surovin</p>
-            </a>
+            <div class="ml-3 mr-3">
+              <a
+                class="btn btn-default btn-block"
+                @click="$emit('on-form-selected', 'supplier')"
+              >
+                Dodavatele surovin
+              </a>
+            </div>
           </div>
         </div>
 
@@ -90,12 +91,13 @@
                 alt=""
               />
             </div>
-            <a
-              class="card-link bg-default"
-              @click="$emit('on-form-selected', 'personnel')"
-            >
-              <p class="text-white text-center">Personál</p>
-            </a>
+            <div class="ml-3 mr-3">
+              <a
+                class="btn btn-default btn-block"
+                @click="$emit('on-form-selected', 'personnel')"
+                >Personál
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -112,17 +114,13 @@
             alt=""
           />
         </div>
-        <div class="row pl-3 pr-3">
-          <div class="col-sm-3" />
+        <div class="row ml-3 mr-3 d-flex flex-column">
           <a
-            class="card-link bg-default col-sm-6"
+            class="col-sm-6 btn btn-default btn-block"
             @click="$emit('on-form-selected', 'waiter')"
           >
-            <p class="text-white text-center">
-              Rozvoz jídla
-            </p>
+            Rozvoz jídla
           </a>
-          <div class="col-sm-3" />
         </div>
       </div>
     </div>
@@ -163,17 +161,6 @@ export default {
       width: 100%;
     }
   }
-
-  .card-link {
-    border-radius: 10px;
-    margin: 0 1rem 1rem 1rem;
-    cursor: pointer;
-
-    p {
-      margin: 1rem;
-      font-weight: 400;
-    }
-  }
 }
 
 .card-wrapper {
@@ -191,6 +178,12 @@ export default {
 
 .gap {
   margin-top: 1rem;
+
+  @media (max-width: 539px) {
+    &:last-of-type {
+      margin-top: 0;
+    }
+  }
 }
 
 .border-radius-ld {
@@ -204,12 +197,12 @@ export default {
 .border-radius-ru {
   border-radius: 0 10% 0 0;
 
-  @media (max-width: 1200px) {
+  @media (max-width: 1199px) {
     border-radius: 0 0 0 0;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 575px) {
   .mb-xs {
     margin-bottom: 13px;
   }
