@@ -128,17 +128,7 @@
 </template>
 
 <script>
-export default {
-  data() {
-    return {
-      icons: [
-        {
-          img1: "zachrangastro_kdesenajim.png"
-        }
-      ]
-    };
-  }
-};
+export default {};
 </script>
 
 <style scoped lang="scss">
@@ -158,7 +148,7 @@ export default {
     padding: 0 1.5rem;
 
     img {
-      width: 100%;
+      width: 80%;
     }
   }
 }
