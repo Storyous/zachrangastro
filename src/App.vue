@@ -2,7 +2,31 @@
   <div id="app" class="container-fluid">
     <div>
       <div class="row bg-pink main-banner">
-        <div class="col">
+        <div class="col-md-8">
+          <div class="row">
+            <picture class="w-100 d-xs-block d-md-none">
+              <source
+                :srcset="require(`@/assets/img/background-mobile_4.png`)"
+                media="(min-width: 650px)"
+                class="w-100"
+              />
+              <source
+                :srcset="require(`@/assets/img/background-mobile_3.png`)"
+                media="(min-width: 530px)"
+                class="w-100"
+              />
+              <source
+                :srcset="require(`@/assets/img/background-mobile_2.png`)"
+                media="(min-width: 400px)"
+                class="w-100"
+              />
+              <img
+                class="w-100"
+                :src="require(`@/assets/img/background-mobile.png`)"
+                alt="An illustration of waiter."
+              />
+            </picture>
+          </div>
           <div class="banner-positioner">
             <h1 class="text-uppercase bg-white text-default">#zachrangastro</h1>
             <p class="text-body">
@@ -15,8 +39,8 @@
             </p>
           </div>
         </div>
-        <div class="col">
-          <social-icons class="social-icons-banner" />
+        <div class="col-md-4 d-none d-xl-block">
+          <social-icons class="some-icons-banner" />
         </div>
       </div>
     </div>
@@ -41,6 +65,7 @@ export default {
 #app {
   font-family: "Source Sans Pro", sans-serif;
   font-weight: 300 !important;
+  overflow-x: hidden;
 }
 
 h1 {
@@ -49,6 +74,22 @@ h1 {
   font-size: 3rem !important;
   font-weight: 700 !important;
   width: fit-content;
+
+  @media (min-width: 768px) and (max-width: 992px) {
+    font-size: 2.5rem !important;
+  }
+
+  @media (max-width: 767px) {
+    margin: 1rem auto !important;
+  }
+
+  @media (max-width: 500px) {
+    font-size: 2rem !important;
+  }
+
+  @media (max-width: 347px) {
+    font-size: 1.75rem !important;
+  }
 }
 
 p {
@@ -56,8 +97,7 @@ p {
 }
 
 .section {
-  padding-top: 2rem;
-  padding-bottom: 3rem;
+  padding-bottom: 4rem;
 }
 
 .font-weight-semibold {
@@ -67,26 +107,77 @@ p {
 .text-body {
   color: #252525;
 }
-.social-icons-banner {
-  margin-top: 20%;
+.some-icons-banner {
+  margin-top: 6rem;
+  margin-right: 3rem;
   float: right;
+
   a {
     display: block;
     padding: 10px;
   }
 }
 .banner-positioner {
-  padding: 7% 0 42% 35%;
+  padding: 6rem 0 42% 25%;
   > p {
-    padding-left: 20px;
+    padding-left: 30px;
+  }
+
+  @media (min-width: 992px) and (max-width: 1199px) {
+    padding: 4rem 0 42% 25%;
+  }
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    padding: 3rem 0 42% 23%;
+  }
+
+  @media (max-width: 767px) {
+    padding: 2rem 0 0 0;
+    width: fit-content;
+    margin: 0 auto;
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+
+    > p {
+      padding-left: 15px;
+      width: fit-content;
+      width: 431px;
+    }
+  }
+
+  @media (max-width: 500px) {
+    top: 0;
+    > p {
+      padding-left: 16px;
+      padding-right: 16px;
+      width: 298px;
+    }
+  }
+
+  @media (max-width: 347px) {
+    > p {
+      width: 265px;
+    }
   }
 }
 .main-banner {
   background-image: url("assets/img/background.png");
-  background-position: top right;
-  background-size: 90%;
+  background-position: 4.5rem top;
+  background-size: 100%;
   background-repeat: no-repeat;
+
+  @media (min-width: 768px) and (max-width: 991px) {
+    background-position: 4.7rem top;
+    background-size: 110%;
+  }
+
+  @media (max-width: 767px) {
+    background-image: none;
+  }
 }
+
 .bg-pink {
   background-color: #ffeae5;
 }

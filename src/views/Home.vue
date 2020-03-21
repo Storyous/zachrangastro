@@ -25,8 +25,12 @@
       </div>
     </div>
     <footer class="row">
-      <div class="col">
-        <a href="https://storyous.com" target="_blank">
+      <div class="col d-flex align-items-center logo-wrapper">
+        <a
+          href="https://storyous.com"
+          target="_blank"
+          class="d-flex align-items-center"
+        >
           <svg
             class="storyous-logo"
             xmlns="http://www.w3.org/2000/svg"
@@ -39,8 +43,8 @@
           </svg>
         </a>
       </div>
-      <div class="col">
-        <social-icons />
+      <div class="col footer-some">
+        <social-icons class="some-icons-footer" />
       </div>
     </footer>
   </div>
@@ -119,8 +123,22 @@ h3 {
   }
 }
 .storyous-logo {
-  width: 120px;
+  width: 150px;
+  margin-left: 3.3rem;
+
+  @media (max-width: 767px) {
+    margin-left: 0;
+  }
 }
+
+.footer-some {
+  margin-right: 2.7rem;
+
+  @media (max-width: 767px) {
+    margin-right: 0;
+  }
+}
+
 footer {
   -webkit-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.6);
   -moz-box-shadow: 0px 0px 30px 0px rgba(0, 0, 0, 0.6);
@@ -128,11 +146,28 @@ footer {
   padding: 10px 20px;
   background-color: #252524;
   color: white;
+
   div:first-child {
     text-align: left;
   }
+
   div:last-child {
     text-align: right;
+  }
+
+  @media (max-width: 476px) {
+    flex-direction: column;
+    padding: 30px 20px;
+
+    .logo-wrapper {
+      justify-content: center;
+    }
+
+    .some-icons-footer {
+      display: flex;
+      justify-content: center;
+      margin-top: 1.5rem;
+    }
   }
 }
 </style>
