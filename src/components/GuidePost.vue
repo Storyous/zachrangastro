@@ -14,11 +14,12 @@
         </div>
         <div class="row ml-3 mr-3 d-flex flex-column">
           <a
-            class="col-sm-6 btn btn-default btn-block"
+            class="col-sm-6 btn btn-default w-100"
             href="http://www.kdesenajim.cz"
             target="blank"
             >Objednat jídlo s sebou
           </a>
+          <div class="safari_only"></div>
         </div>
       </div>
     </div>
@@ -38,7 +39,7 @@
             </div>
             <div class="ml-3 mr-3">
               <a
-                class="btn btn-default btn-block"
+                class="btn btn-default w-100"
                 @click="$emit('on-form-selected', 'delivery')"
                 >Rozvážet jídlo
               </a>
@@ -58,7 +59,7 @@
             </div>
             <div class="ml-3 mr-3">
               <a
-                class="btn btn-default btn-block"
+                class="btn btn-default w-100"
                 @click="$emit('on-form-selected', 'takeaway')"
                 >Prodávat jídlo s sebou
               </a>
@@ -76,7 +77,7 @@
             </div>
             <div class="ml-3 mr-3">
               <a
-                class="btn btn-default btn-block"
+                class="btn btn-default w-100"
                 @click="$emit('on-form-selected', 'supplier')"
               >
                 Dodavatele surovin
@@ -95,7 +96,7 @@
             </div>
             <div class="ml-3 mr-3">
               <a
-                class="btn btn-default btn-block"
+                class="btn btn-default w-100"
                 @click="$emit('on-form-selected', 'personnel')"
                 >Personál
               </a>
@@ -120,11 +121,12 @@
         </div>
         <div class="row ml-3 mr-3 d-flex flex-column">
           <a
-            class="col-sm-6 btn btn-default btn-block"
+            class="col-sm-6 btn btn-default w-100"
             @click="$emit('on-form-selected', 'waiter')"
           >
             Rozvoz jídla
           </a>
+          <div class="safari_only"></div>
         </div>
       </div>
     </div>
@@ -243,5 +245,13 @@ export default {};
 h2 {
   font-size: 1.5rem;
   margin-bottom: 2rem;
+}
+
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    .safari_only {
+      height: 24px;
+    }
+  }
 }
 </style>

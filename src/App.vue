@@ -71,7 +71,7 @@ export default {
 
 <style lang="scss">
 #app {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-weight: 300 !important;
   overflow-x: hidden;
 }
