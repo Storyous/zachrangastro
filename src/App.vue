@@ -123,6 +123,10 @@ p {
 
 .section {
   padding-bottom: 4rem;
+
+  @media (min-width: 768px) {
+    padding-bottom: 7rem;
+  }
 }
 
 .font-weight-semibold {

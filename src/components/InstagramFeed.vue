@@ -33,7 +33,7 @@ export default {
         {
           id: 1,
           image: "gastro_1.jpg",
-          link: "https://www.instagram.com/p/B92KjKWnzE9/"
+          link: "https://www.instagram.com/p/B9_mks-H8GH/"
         },
         {
           id: 2,
@@ -48,7 +48,7 @@ export default {
         {
           id: 4,
           image: "gastro_4.jpg",
-          link: "https://www.instagram.com/p/B986Y0GJVm2/"
+          link: "https://www.instagram.com/p/B989kfigMgh/"
         }
       ]
     };
