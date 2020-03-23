@@ -27,8 +27,7 @@ export default {
     },
     styles: () => {
       return {
-        "min-height": `685px`
-        //'min-height': `${window.document.body.scrollHeight - 180}px`
+        "min-height": `75vh`
       };
     }
   }
