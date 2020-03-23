@@ -40,7 +40,7 @@
             <div class="ml-3 mr-3">
               <a
                 class="btn btn-default w-100"
-                @click="$emit('on-form-selected', types.DELIVERY)"
+                @click="handleFormOpen(types.DELIVERY)"
                 >Rozvážet jídlo
               </a>
             </div>
@@ -60,7 +60,7 @@
             <div class="ml-3 mr-3">
               <a
                 class="btn btn-default w-100"
-                @click="$emit('on-form-selected', types.TAKEAWAY)"
+                @click="handleFormOpen(types.TAKEAWAY)"
                 >Prodávat jídlo s sebou
               </a>
             </div>
@@ -78,7 +78,7 @@
             <div class="ml-3 mr-3">
               <a
                 class="btn btn-default w-100"
-                @click="$emit('on-form-selected', types.SUPPLIER)"
+                @click="handleFormOpen(types.SUPPLIER)"
               >
                 Dodavatele surovin
               </a>
@@ -97,7 +97,7 @@
             <div class="ml-3 mr-3">
               <a
                 class="btn btn-default w-100"
-                @click="$emit('on-form-selected', types.PERSONNEL)"
+                @click="handleFormOpen(types.PERSONNEL)"
                 >Personál
               </a>
             </div>
@@ -122,7 +122,7 @@
         <div class="row ml-3 mr-3 d-flex flex-column">
           <a
             class="col-sm-6 btn btn-default w-100"
-            @click="$emit('on-form-selected', types.WAITER)"
+            @click="handleFormOpen(types.WAITER)"
           >
             Rozvoz jídla
           </a>
@@ -141,6 +141,16 @@ export default {
     return {
       types: googleForms.types
     };
+  },
+  methods: {
+    handleFormOpen(type) {
+      if (this.$isMobile) {
+        const win = window.open(googleForms.links[type], "_blank");
+        win.focus();
+      } else {
+        this.$emit("on-form-selected", type);
+      }
+    }
   }
 };
 </script>
