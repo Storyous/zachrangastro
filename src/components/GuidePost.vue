@@ -163,6 +163,10 @@ export default {
   .icon-section {
     height: 100%;
     padding: 0 1.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: -1rem;
 
     img {
       width: 80%;
@@ -204,6 +208,10 @@ export default {
       left: 50%;
       transform: translateX(-50%);
       width: 100%;
+    }
+
+    a {
+      font-size: 0.9rem;
     }
   }
 }
@@ -261,7 +269,6 @@ export default {
 }
 
 h2 {
-  font-size: 1.5rem;
   margin-bottom: 2rem;
 }
 

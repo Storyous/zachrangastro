@@ -120,6 +120,10 @@ h1 {
   }
 }
 
+h2 {
+  font-size: 1.5rem !important;
+}
+
 p {
   margin: 0.75rem 0.25rem !important;
   font-size: 1.2rem;
@@ -247,9 +251,6 @@ p {
 
   &:hover {
     background-color: darken(#f05a5a, 5%) !important;
-  }
-
-  @media (max-width: 575px) {
   }
 }
 </style>

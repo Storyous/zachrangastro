@@ -1,7 +1,7 @@
 <template>
   <section class="col-12 bg-pink space-for-video">
     <div class="instagram-feed">
-      <h3 class="instagram-hashtag">
+      <h2 class="instagram-hashtag">
         <a
           href="https://www.instagram.com/explore/tags/zachrangastro/"
           target="_blank"
@@ -9,7 +9,7 @@
         >
           #zachrangastro
         </a>
-      </h3>
+      </h2>
       <div class="row">
         <div
           v-for="post of posts.slice(0, 4).reverse()"

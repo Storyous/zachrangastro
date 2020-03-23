@@ -27,7 +27,7 @@
     <div class="row">
       <div class="col text-center">
         <div class="safari-only" />
-        <h3>Naši partneři</h3>
+        <h2>Naši partneři</h2>
       </div>
     </div>
     <div class="row partners d-flex justify-content-center">
@@ -117,7 +117,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-h3 {
+h2 {
   margin: 2rem 0;
 }
 
@@ -162,6 +162,10 @@ h3 {
 .video-frame-wrapper {
   padding: 1rem;
   filter: drop-shadow(0px 0px 7px #00000020);
+
+  a {
+    font-size: 0.9rem;
+  }
 }
 
 .video-frame {
@@ -196,7 +200,7 @@ h3 {
 }
 
 .partners {
-  margin-bottom: 30px;
+  margin-bottom: 5rem;
 
   @media (min-width: 768px) and (max-width: 1199px) {
     padding-left: 5rem;
