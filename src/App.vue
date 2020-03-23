@@ -59,12 +59,22 @@
 <script>
 import Home from "./views/Home.vue";
 import SocialIcons from "./components/SocialIcons.vue";
+import { links } from "./googleForms";
 
 export default {
   name: "App",
   components: {
     Home,
     SocialIcons
+  },
+  mounted() {
+    Object.values(links).forEach(href => {
+      const preloadLink = document.createElement("link");
+      preloadLink.href = href;
+      preloadLink.rel = "preload";
+      preloadLink.as = "document";
+      window.document.head.appendChild(preloadLink);
+    });
   }
 };
 </script>

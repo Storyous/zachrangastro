@@ -40,7 +40,7 @@
             <div class="ml-3 mr-3">
               <a
                 class="btn btn-default w-100"
-                @click="$emit('on-form-selected', 'delivery')"
+                @click="$emit('on-form-selected', types.DELIVERY)"
                 >Rozvážet jídlo
               </a>
             </div>
@@ -60,7 +60,7 @@
             <div class="ml-3 mr-3">
               <a
                 class="btn btn-default w-100"
-                @click="$emit('on-form-selected', 'takeaway')"
+                @click="$emit('on-form-selected', types.TAKEAWAY)"
                 >Prodávat jídlo s sebou
               </a>
             </div>
@@ -78,7 +78,7 @@
             <div class="ml-3 mr-3">
               <a
                 class="btn btn-default w-100"
-                @click="$emit('on-form-selected', 'supplier')"
+                @click="$emit('on-form-selected', types.SUPPLIER)"
               >
                 Dodavatele surovin
               </a>
@@ -97,7 +97,7 @@
             <div class="ml-3 mr-3">
               <a
                 class="btn btn-default w-100"
-                @click="$emit('on-form-selected', 'personnel')"
+                @click="$emit('on-form-selected', types.PERSONNEL)"
                 >Personál
               </a>
             </div>
@@ -122,7 +122,7 @@
         <div class="row ml-3 mr-3 d-flex flex-column">
           <a
             class="col-sm-6 btn btn-default w-100"
-            @click="$emit('on-form-selected', 'waiter')"
+            @click="$emit('on-form-selected', types.WAITER)"
           >
             Rozvoz jídla
           </a>
@@ -134,7 +134,15 @@
 </template>
 
 <script>
-export default {};
+import googleForms from "../googleForms.js";
+
+export default {
+  data() {
+    return {
+      types: googleForms.types
+    };
+  }
+};
 </script>
 
 <style scoped lang="scss">
