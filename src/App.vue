@@ -2,7 +2,7 @@
   <div id="app" class="container-fluid">
     <div>
       <div class="row bg-pink main-banner">
-        <div class="col-md-8 col-lg-7">
+        <div class="col-md-9 col-lg-7">
           <div class="row">
             <picture class="w-100 d-xs-block d-md-none">
               <source
@@ -47,7 +47,7 @@
             </p>
           </div>
         </div>
-        <div class="col-md-4 col-lg-5 d-none d-xl-block">
+        <div class="col-md-3 col-lg-5 d-none d-xl-block">
           <social-icons class="some-icons-banner" />
         </div>
       </div>
@@ -126,7 +126,7 @@ p {
     font-size: 1.5rem;
   }
 
-  @media (max-width: 399px) {
+  @media (max-width: 466px) {
     font-size: 1rem;
   }
 }
