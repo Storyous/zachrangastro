@@ -26,6 +26,7 @@
     </div>
     <div class="row">
       <div class="col text-center">
+        <div class="safari-only" />
         <h3>Naši partneři</h3>
       </div>
     </div>
@@ -209,6 +210,14 @@ h3 {
 
   img {
     max-width: 100%;
+  }
+}
+
+@media not all and (min-resolution: 0.001dpcm) {
+  @supports (-webkit-appearance: none) {
+    .safari-only {
+      height: 2rem;
+    }
   }
 }
 
