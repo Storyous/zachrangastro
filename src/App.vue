@@ -59,7 +59,7 @@
 <script>
 import Home from "./views/Home.vue";
 import SocialIcons from "./components/SocialIcons.vue";
-import { links } from "./googleForms";
+import { forms } from "./googleForms";
 
 export default {
   name: "App",
@@ -69,9 +69,9 @@ export default {
   },
   mounted() {
     if (!this.$isMobile) {
-      Object.values(links).forEach(href => {
+      Object.values(forms).forEach(form => {
         const preloadLink = document.createElement("link");
-        preloadLink.href = href;
+        preloadLink.href = form.link;
         preloadLink.rel = "preload";
         preloadLink.as = "document";
         window.document.head.appendChild(preloadLink);

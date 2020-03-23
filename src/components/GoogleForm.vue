@@ -1,11 +1,13 @@
 <template>
-  <div class="col bg-pink" id="google-form">
-    <iframe :style="styles" :src="source" frameborder="0"></iframe>
+  <div class="col bg-pink">
+    <iframe :src="source" :style="styles" ref="google-iframe" frameborder="0">
+      Loading ...
+    </iframe>
   </div>
 </template>
 
 <script>
-import { links } from "../googleForms.js";
+import { forms } from "../googleForms.js";
 
 export default {
   name: "GoogleForm",
@@ -16,18 +18,19 @@ export default {
     }
   },
   mounted() {
-    window.document.getElementById("google-form").scrollIntoView();
+    const iframe = this.$refs["google-iframe"];
+    iframe.scrollIntoView();
   },
   computed: {
     source: function() {
-      if (this.type in links) {
-        return links[this.type];
+      if (this.type in forms) {
+        return forms[this.type].link;
       }
       return null;
     },
-    styles: () => {
+    styles: function() {
       return {
-        "min-height": `75vh`
+        height: `${forms[this.type].desktop}px`
       };
     }
   }
