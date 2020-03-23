@@ -145,7 +145,7 @@ export default {
   methods: {
     handleFormOpen(type) {
       if (this.$isMobile) {
-        const win = window.open(googleForms.links[type], "_blank");
+        const win = window.open(googleForms.forms[type].link, "_blank");
         win.focus();
       } else {
         this.$emit("on-form-selected", type);
