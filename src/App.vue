@@ -68,13 +68,15 @@ export default {
     SocialIcons
   },
   mounted() {
-    Object.values(links).forEach(href => {
-      const preloadLink = document.createElement("link");
-      preloadLink.href = href;
-      preloadLink.rel = "preload";
-      preloadLink.as = "document";
-      window.document.head.appendChild(preloadLink);
-    });
+    if (!this.$isMobile) {
+      Object.values(links).forEach(href => {
+        const preloadLink = document.createElement("link");
+        preloadLink.href = href;
+        preloadLink.rel = "preload";
+        preloadLink.as = "document";
+        window.document.head.appendChild(preloadLink);
+      });
+    }
   }
 };
 </script>
